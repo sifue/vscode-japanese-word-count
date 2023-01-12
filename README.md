@@ -28,5 +28,9 @@
 GitHubのリポジトリの[Issues](https://github.com/sifue/vscode-japanese-word-count/issues)までお願いします。
 
 ## Release Notes
+
+### 0.0.2
+改行の取り扱いを加え、使用をドキュメントに明記
+
 ### 0.0.1
 初回リリース
