@@ -17,6 +17,7 @@
     "onCommand:japanese-word-count.wordcountDeactivate"
   ],
   "main": "./out/extension.js",
+  "repository" : "https://github.com/sifue/vscode-japanese-word-count",
   "contributes": {
     "commands": [
       {
