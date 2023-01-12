@@ -6,6 +6,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 - 設定機能
+- ユニットテスト
 
 ## [0.0.1] - 2023-01-12
 最初のリリース
