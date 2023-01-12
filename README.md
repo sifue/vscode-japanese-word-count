@@ -6,8 +6,8 @@
 ちなみに実装は、[holmesconan/vscode-wordcount-cjk](https://github.com/holmesconan/vscode-wordcount-cjk)を参考にした。
 
 ## 機能
-- 日本語の文字数カウントを行い、ステータスバーに表示する。
-- ステータスバーのツールチップには加えて、スペースを抜いたものと、400字詰め原稿用紙の枚数を表示する。
+- 日本語の文字数カウントを行い、ステータスバーに表示する
+- ステータスバーのツールチップには加えて、スペースを抜いたものと、400字詰め原稿用紙の枚数を表示する
 - アクティブにしたウインドウの他、選択した文字列に関してもカウントを行う
 
 ## 必要要件
@@ -17,10 +17,8 @@
 なし
 
 ## 既知の問題
-GitHubのリポジトリのIssuesまでお願いします。
+GitHubのリポジトリの[Issues](https://github.com/sifue/vscode-japanese-word-count/issues)までお願いします。
 
 ## Release Notes
 ### 0.0.1
 初回リリース
-
-**Enjoy!**
