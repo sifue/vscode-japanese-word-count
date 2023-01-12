@@ -3,6 +3,16 @@
 
 ちなみに実装は、[holmesconan/vscode-wordcount-cjk](https://github.com/holmesconan/vscode-wordcount-cjk)を参考にした。
 
+## カウントの仕様
+### 文字数カウント
+- 改行(正規表現`\n`と`\r`) を取り除いたあとJavaScriptの"ja"のロケールの[Intl.Segmenter](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter)で分割できるキャラクターの数をカウント
+
+### 文字数カウント (スペース無視)
+- 改行(正規表現`\n`と`\r`)とスペース(正規表現`\s`)を取り除いたあとJavaScriptの"ja"のロケールの[Intl.Segmenter](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter)で分割できるキャラクターの数をカウント
+
+### 原稿用紙換算(400x?枚)
+- 改行(正規表現`\n`)で各行を分割した後、キャリッジリターンの改行コード(正規表現`\r`)を除去し、"ja"のロケールの[Intl.Segmenter](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter)で分割できるキャラクターの数が20文字切り上げで行数をカウントし、20行の切り上げ値を原稿用紙の枚数としてカウント
+
 ## 機能
 - 日本語の文字数カウントを行い、ステータスバーに表示する
 - ステータスバーのツールチップには加えて、スペースを抜いたものと、400字詰め原稿用紙の枚数を表示する

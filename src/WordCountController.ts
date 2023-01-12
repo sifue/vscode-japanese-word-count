@@ -78,8 +78,10 @@ export class WordCountController {
             text = editor.document.getText(editor.selection);
         }
         
-        if (!isWithSpace) {
-            text = text.replace(/\s/g, '');
+        if (isWithSpace) {
+            text = text.replace(/\n|\r/g, '');
+        } else {
+            text = text.replace(/\n|\r|\s/g, '');
         }
         count = this.countGrapheme(text);
     
@@ -103,7 +105,8 @@ export class WordCountController {
         }
 
         text.split(/\n/).forEach((line) => {
-            lineCount += Math.ceil(this.countGrapheme(line) / 20);
+            const lineWithoutR = line.replace(/\r/g, '');
+            lineCount += Math.ceil(this.countGrapheme(lineWithoutR) / 20);
         });
 
         return Math.ceil(lineCount / 20);

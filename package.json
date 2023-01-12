@@ -2,7 +2,7 @@
   "name": "japanese-word-count",
   "displayName": "Japanese Word Count",
   "description": "日本語の文字数カウントです。正確には単語数ではなく文字数をカウントし、ステータスバーに表示します。「🇯🇵」や「👨🏻‍💻」などの絵文字も1文字としてカウントします。ツールチップには、スペース無視の場合と400字詰め原稿用紙の枚数も表示します。",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.74.0"
   },
