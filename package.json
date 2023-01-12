@@ -1,0 +1,56 @@
+{
+  "name": "japanese-word-count",
+  "displayName": "Japanese Word Count",
+  "description": "日本語の文字数カウントです。正確には単語数ではなく文字数をカウントし、ステータスバーに表示します。「🇯🇵」や「👨🏻‍💻」などの絵文字も1文字としてカウントします。ツールチップには、スペース無視の場合と400字詰め原稿用紙の枚数も表示します。",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:markdown",
+    "onLanguage:plaintext",
+    "onCommand:japanese-word-count.wordcount",
+    "onCommand:japanese-word-count.wordcountActivate",
+    "onCommand:japanese-word-count.wordcountDeactivate"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "japanese-word-count.wordcount",
+        "title": "Japanese Word Count (文字数カウント)"
+      },
+      {
+        "command": "japanese-word-count.wordcountActivate",
+        "title": "Japanese Word Count Activate (文字数カウント起動)"
+      },
+      {
+        "command": "japanese-word-count.wordcountDeactivate",
+        "title": "Japanese Word Count Deactivate (文字数カウント停止)"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.74.0",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "@vscode/test-electron": "^2.2.0",
+    "eslint": "^8.28.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.1.0",
+    "typescript": "^4.9.3"
+  }
+}
